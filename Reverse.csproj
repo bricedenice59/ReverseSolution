@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BenchmarkDotNet" Version="0.13.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Reverse.Tests\**" />
+      <Compile Remove="UnitTests\**" />
+      <Compile Remove="DesignPatterns.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Reverse.Tests\**" />
+      <EmbeddedResource Remove="UnitTests\**" />
+      <EmbeddedResource Remove="DesignPatterns.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Reverse.Tests\**" />
+      <None Remove="UnitTests\**" />
+      <None Remove="DesignPatterns.Tests\**" />
+    </ItemGroup>
+
+</Project>
